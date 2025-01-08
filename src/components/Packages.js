@@ -1,32 +1,54 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./Packages.css";
 
 function Packages() {
   // State to track the selected package
   const [selectedPackage, setSelectedPackage] = useState(null);
+  const [packageData, setPackageData] = useState([]); // State to hold package data
 
-  // Package data
-  const packageData = [
-    {
-      id: 1,
-      name: "Starter Pack",
-      price: "₹5,000",
-      features: ["Social Media Promotion", "Press Release"],
-    },
-    {
-      id: 2,
-      name: "Pro Pack",
-      price: "₹15,000",
-      features: ["Social Media Promotion", "Press Release", "Blog Features"],
-    },
-    {
-      id: 3,
-      name: "Enterprise Pack",
-      price: "₹30,000",
-      features: ["All Features + 1:1 PR Consultation"],
-    },
-  ];
+  // Fetch package data from API
+  useEffect(() => {
+    // Uncomment the following code to fetch package data from an API
+    /*
+    fetch('/api/packages')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        setPackageData(data); // Set the fetched package data
+      })
+      .catch(error => {
+        console.error('Error fetching package data:', error);
+      });
+    */
+
+    // Example static package data (remove this when using API)
+    const staticPackageData = [
+      {
+        id: 1,
+        name: "Starter Pack",
+        price: "₹5,000",
+        features: ["Social Media Promotion", "Press Release"],
+      },
+      {
+        id: 2,
+        name: "Pro Pack",
+        price: "₹15,000",
+        features: ["Social Media Promotion", "Press Release", "Blog Features"],
+      },
+      {
+        id: 3,
+        name: "Enterprise Pack",
+        price: "₹30,000",
+        features: ["All Features + 1:1 PR Consultation"],
+      },
+    ];
+    setPackageData(staticPackageData); // Set static data for now
+  }, []);
 
   // Function to handle the package selection
   const handleChoosePlan = (pkg) => {

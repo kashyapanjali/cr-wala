@@ -44,15 +44,33 @@ const Appointment = () => {
 
     // Check for errors
     if (!errors.name && !errors.email && !errors.date) {
-      // Simulate a successful booking (e.g., API call)
-      // Here, you can replace this with an actual API call to save the data
-      alert(`Appointment booked for ${formData.name} on ${formData.date}!`);
+        // Simulate a successful booking (e.g., API call)
+        // Here, you can replace this with an actual API call to save the data
+        // Example:
+        // fetch('/api/appointments', {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: JSON.stringify(formData),
+        // })
+        // .then(response => response.json())
+        // .then(data => {
+        //     alert(`Appointment booked for ${data.name} on ${data.date}!`);
+        //     setIsSubmitted(true);
+        //     setFormData({ name: "", email: "", date: "" });
+        // })
+        // .catch(error => {
+        //     console.error('Error booking appointment:', error);
+        // });
 
-      // Simulate a backend call (here just setting state for demo)
-      setIsSubmitted(true);
+        alert(`Appointment booked for ${formData.name} on ${formData.date}!`);
 
-      // Reset form data after booking
-      setFormData({ name: "", email: "", date: "" });
+        // Simulate a backend call (here just setting state for demo)
+        setIsSubmitted(true);
+
+        // Reset form data after booking
+        setFormData({ name: "", email: "", date: "" });
     }
   };
 

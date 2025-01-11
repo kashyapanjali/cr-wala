@@ -23,9 +23,9 @@ Make sure you have Node.js and npm installed on your machine.
 
 ### Installation
 
-1. Clone the repository:
+1. Clone the repository in your local machine:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/kashyapanjali/cr-wala
    cd cr-wala
    ```
 
@@ -47,20 +47,6 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode. The page will reload when you make changes.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
 ## Components
 
 ### HeroSection
@@ -74,3 +60,7 @@ The `Packages` component displays various PR marketing packages available for se
 ### Appointment
 
 The `Appointment` component allows users to book an appointment by filling out a form with their name, email, and preferred date. It includes validation for the input fields to ensure the data is correct before submission.
+
+### Footer
+
+add the copyright value and some social redirect link 

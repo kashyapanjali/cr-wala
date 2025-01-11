@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./HeroSection.css";
 
@@ -7,7 +7,7 @@ const scrollToPackages = () => {
 };
 
 function HeroSection() {
-  const [welcomeMessage, setWelcomeMessage] = useState("");
+  const welcomeMessage = "";
 
   // Uncomment the following code to fetch data from an API
   /*
